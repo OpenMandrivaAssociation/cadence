@@ -1,11 +1,14 @@
-Name:           Cadence
-Version:        @SERVICE@
-Release:        0
+%define git 20220331
+%define oname Cadence
+
+Name:           cadence
+Version:        0.9.1
+Release:        0.%{git}.1
 Summary:        A JACK Audio Toolbox
 License:        GPL-2.0-or-later
 Group:          Productivity/Multimedia/Sound/Utilities
-URL:            http://kxstudio.sourceforge.net/cadence
-Source:         %{name}-%{version}.tar.xz
+URL:            https://kx.studio/Applications:Cadence
+Source:         https://github.com/falkTX/Cadence/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 BuildRequires:  alsa-devel
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
@@ -24,7 +27,7 @@ Recommends:     pulseaudio-module-jack
 Recommends:     zita-a2jbridge
 
 %description
- Cadence is a set of tools useful for audio production.
+Cadence is a set of tools useful for audio production.
 Cadence itself is also an application (the main one), which this page will document.
 There are other applications that are part of the Cadence suite, they are usually named as the "Cadence tools".
 They are:
