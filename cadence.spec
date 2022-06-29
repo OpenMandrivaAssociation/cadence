@@ -17,7 +17,7 @@ BuildRequires:  python-qt5-devel
 BuildRequires:  pkgconfig(dbus-python)
 BuildRequires:  pkgconfig(jack)
 BuildRequires:  unzip
-BuildRequires:  update-desktop-files
+#BuildRequires:  update-desktop-files
 Requires:       a2jmidid
 Requires:       jack_capture
 Requires:       ladish
@@ -43,38 +43,23 @@ Some of these also have sub-tools, such as Cadence-JackMeter and Claudia-Launche
 %build
 export CXXFLAGS="%{optflags}"
 export CFLAGS="%{optflags}"
-%if 0%{?suse_version}
+#%if 0%{?suse_version}
 #sed -i 's:pyuic4:py3uic4:' Makefile
-sed -i 's:wildcard /:wildcard $(DESTDIR)/:' Makefile
-%endif
+#sed -i 's:wildcard /:wildcard $(DESTDIR)/:' Makefile
+#%endif
 make %{?_smp_mflags}
 
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/X11/xinit/xinitrc.d
 make install DESTDIR=%{buildroot} PREFIX="%{_prefix}"
-%if 0%{?suse_version}
- %suse_update_desktop_file -r cadence AudioVideo Music
- %suse_update_desktop_file -r catarina AudioVideo Music
- %suse_update_desktop_file -r catia AudioVideo Music
- %suse_update_desktop_file -r claudia AudioVideo Music
- %suse_update_desktop_file -r claudia-launcher AudioVideo Music
-%endif
+
 
 %files
 %license COPYING
 %doc TODO INSTALL.md README.md
 %{_bindir}/*
 %{_sysconfdir}/xdg/autostart/cadence-session-start.desktop
-%if 0%{?suse_version}
-%dir %{_sysconfdir}/X11/xinit
-%dir %{_sysconfdir}/X11/xinit/xinitrc.d
-%{_sysconfdir}/X11/xinit/xinitrc.d/*
-%endif
 
-%if %{defined fedora}
-%dir %{_sysconfdir}/X11/Xsession.d
-%{_sysconfdir}/X11/Xsession.d/*
-%endif
 
 %dir %{_datadir}/cadence
 %{_datadir}/cadence/*
