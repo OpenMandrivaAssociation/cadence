@@ -1,9 +1,8 @@
-%define git 20220331
 %define oname Cadence
 
 Name:           cadence
-Version:        0.9.1
-Release:        0.%{git}.1
+Version:        0.9.2
+Release:        1
 Summary:        A JACK Audio Toolbox
 License:        GPL-2.0-or-later
 Group:          Productivity/Multimedia/Sound/Utilities
@@ -13,10 +12,10 @@ BuildRequires:  alsa-devel
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Widgets)
-BuildRequires:  python3-qt5
-BuildRequires:  python3-qt5-devel
-BuildRequires:  dbus-1-python3-devel
-BuildRequires:  libjack-devel
+BuildRequires:  python-qt5
+BuildRequires:  python-qt5-devel
+BuildRequires:  pkgconfig(dbus-python)
+BuildRequires:  pkgconfig(jack)
 BuildRequires:  unzip
 BuildRequires:  update-desktop-files
 Requires:       a2jmidid
@@ -39,7 +38,7 @@ They are:
 Some of these also have sub-tools, such as Cadence-JackMeter and Claudia-Launcher.
 
 %prep
-%setup -q -n Cadence-%{version}
+%setup -q -n Cadence-%{version} -p1
 
 %build
 export CXXFLAGS="%{optflags}"
