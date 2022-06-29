@@ -38,7 +38,7 @@ They are:
 Some of these also have sub-tools, such as Cadence-JackMeter and Claudia-Launcher.
 
 %prep
-%setup -q -n Cadence-%{version} -p1
+%autosetup -n %{oname}-%{version} -p1
 
 %build
 export CXXFLAGS="%{optflags}"
