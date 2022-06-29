@@ -8,7 +8,7 @@ License:        GPL-2.0-or-later
 Group:          Productivity/Multimedia/Sound/Utilities
 URL:            https://kx.studio/Applications:Cadence
 Source:         https://github.com/falkTX/Cadence/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
-BuildRequires:  alsa-devel
+BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Widgets)
