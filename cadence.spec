@@ -61,8 +61,7 @@ make install DESTDIR=%{buildroot} PREFIX="%{_prefix}"
 %doc TODO INSTALL.md README.md
 %{_bindir}/*
 %{_sysconfdir}/xdg/autostart/cadence-session-start.desktop
-
-
+%{_sysconfdir}/X11/xinit/xinitrc.d/61-cadence-session-inject.sh
 %dir %{_datadir}/cadence
 %{_datadir}/cadence/*
 %{_datadir}/applications/*.desktop
