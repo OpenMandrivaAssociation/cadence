@@ -23,7 +23,7 @@ BuildRequires:  unzip
 # In contrib repo. Let's pull it as optional dep
 Recommends:       a2jmidid
 Recommends:       jack_capture
-Recommedns:       ladish
+Recommends:       ladish
 Recommends:       zita-ajbridge
 Recommends:       pulseaudio-module-jack
 Requires:       dbus-python
