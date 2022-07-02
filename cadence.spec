@@ -51,7 +51,7 @@ export CFLAGS="%{optflags}"
 
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/X11/xinit/xinitrc.d
-%make_install
+make install DESTDIR=%{buildroot} PREFIX="%{_prefix}"
 
 %files
 %license COPYING
