@@ -19,13 +19,15 @@ BuildRequires:  python-qt5-devel
 BuildRequires:  pkgconfig(dbus-python)
 BuildRequires:  pkgconfig(jack)
 BuildRequires:  unzip
-#BuildRequires:  update-desktop-files
-Requires:       a2jmidid
-Requires:       jack_capture
-Requires:       ladish
-Requires:       dbus-1-python3
-Recommends:     pulseaudio-module-jack
-Recommends:     zita-a2jbridge
+
+# In contrib repo. Let's pull it as optional dep
+Recommends:       a2jmidid
+Recommends:       jack_capture
+Recommedns:       ladish
+Recommends:       zita-ajbridge
+Recommends:       pulseaudio-module-jack
+Requires:       dbus-python
+
 
 %description
 Cadence is a set of tools useful for audio production.
@@ -45,16 +47,11 @@ Some of these also have sub-tools, such as Cadence-JackMeter and Claudia-Launche
 %build
 export CXXFLAGS="%{optflags}"
 export CFLAGS="%{optflags}"
-#%if 0%{?suse_version}
-#sed -i 's:pyuic4:py3uic4:' Makefile
-#sed -i 's:wildcard /:wildcard $(DESTDIR)/:' Makefile
-#%endif
-make %{?_smp_mflags}
+%make_build
 
 %install
 mkdir -p %{buildroot}%{_sysconfdir}/X11/xinit/xinitrc.d
-make install DESTDIR=%{buildroot} PREFIX="%{_prefix}"
-
+%make_install
 
 %files
 %license COPYING
