@@ -4,7 +4,7 @@
 
 Name:           cadence
 Version:        0.9.2
-Release:        1
+Release:        2
 Summary:        A JACK Audio Toolbox
 License:        GPL-2.0-or-later
 Group:          Productivity/Multimedia/Sound/Utilities
