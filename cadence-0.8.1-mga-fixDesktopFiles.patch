@@ -1,0 +1,112 @@
+*** Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/cadence.desktop	2014-07-18 20:55:34.000000000 +0200
+--- Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/cadence.desktop	2014-08-21 20:24:25.000000000 +0200
+***************
+*** 6,65 ****
+  Icon=cadence
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;AudioEditing;Qt;
+! X-Ayatana-Desktop-Shortcuts=Catia;Claudia;ClaudiaLauncher;Carla;CarlaControl;JackMeterIn;JackMeterOut;JackSettings;Logs;Render;XYController;
+! 
+! [Catia Shortcut Group]
+! Name=Catia
+! Exec=catia
+! TargetEnvironment=Unity
+! 
+! [Claudia Shortcut Group]
+! Name=Claudia
+! Exec=claudia
+! TargetEnvironment=Unity
+! 
+! [ClaudiaLauncher Shortcut Group]
+! Name=Claudia Launcher
+! Exec=claudia-launcher
+! TargetEnvironment=Unity
+! 
+! [Carla Shortcut Group]
+! Name=Carla
+! Exec=carla
+! TargetEnvironment=Unity
+! 
+! [CarlaControl Shortcut Group]
+! Name=Carla Control
+! Exec=carla-control
+! TargetEnvironment=Unity
+! 
+! [JackMeterIn Shortcut Group]
+! Name=JACK Meter (Inputs)
+! Exec=cadence-jackmeter -in
+! TargetEnvironment=Unity
+! 
+! [JackMeterOut Shortcut Group]
+! Name=JACK Meter (Outputs)
+! Exec=cadence-jackmeter
+! TargetEnvironment=Unity
+! 
+! [JackSettings Shortcut Group]
+! Name=JACK Settings
+! Exec=cadence-jacksettings
+! TargetEnvironment=Unity
+! 
+! [Logs Shortcut Group]
+! Name=Logs
+! Exec=cadence-logs
+! TargetEnvironment=Unity
+! 
+! [Render Shortcut Group]
+! Name=Render
+! Exec=cadence-render
+! TargetEnvironment=Unity
+! 
+! [XYController Shortcut Group]
+! Name=XY-Controller
+! Exec=cadence-xycontroller
+! TargetEnvironment=Unity
+--- 6,9 ----
+  Icon=cadence
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;Qt;
+\ Pas de fin de ligne à la fin du fichier
+
+*** Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/catia.desktop	2014-07-18 20:55:34.000000000 +0200
+--- Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/catia.desktop	2014-08-21 20:24:50.000000000 +0200
+***************
+*** 6,9 ****
+  Icon=catia
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;AudioEditing;Qt;
+--- 6,9 ----
+  Icon=catia
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;Qt;
+
+*** Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/claudia.desktop	2014-07-18 20:55:34.000000000 +0200
+--- Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/claudia.desktop	2014-08-21 20:25:12.000000000 +0200
+***************
+*** 6,9 ****
+  Icon=claudia
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;AudioEditing;Qt;
+--- 6,9 ----
+  Icon=claudia
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;Qt;
+
+*** Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/claudia-launcher.desktop	2014-07-18 20:55:34.000000000 +0200
+--- Cadence-ec2a8320832b076c0962ab65dd2f8163275cc013/data/claudia-launcher.desktop	2014-08-21 21:56:05.839257375 +0200
+***************
+*** 6,9 ****
+  Icon=claudia-launcher
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;AudioEditing;Qt;
+--- 6,9 ----
+  Icon=claudia-launcher
+  Terminal=false
+  Type=Application
+! Categories=AudioVideo;Qt;

@@ -1,0 +1,11 @@
+# False positives:
+# cadence-session-start.desktop belongs to /etc/xdg/autostart
+# 61-cadence-session-inject.sh belongs to /etc/X11/xinit/xinitrc.d
+addFilter("W: non-conffile-in-etc")
+
+# The package provides a python script in /usr/bin -> should it be noarch;
+# however in cadence-tools sub-package it has binaries: it cannot be marked as so...
+#addFilter("E: no-binary")
+
+# There are no man pages at all
+addFilter("W: no-manual-page-for-binary")
