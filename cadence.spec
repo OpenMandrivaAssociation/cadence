@@ -95,7 +95,8 @@ This package contains the shared data and python modules.
 %package tools
 Summary:	Set of tools useful for audio production
 Requires:	%{name}-data = %{EVRD}
-Requires:	jack_capture
+# Really a Requires, but this is in Extra
+Recommends:		jack_capture
 
 %description tools
 Cadence is a set of tools useful for audio production.
